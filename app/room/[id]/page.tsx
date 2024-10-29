@@ -162,6 +162,7 @@ export default function Chat({ params }: { params: { id: string } }) {
             setLoading(false);
         }
         fetchDataRoom();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
@@ -174,6 +175,7 @@ export default function Chat({ params }: { params: { id: string } }) {
         if (input != "")
             return setTyping(responseUserCur?.nama.split(" ")[0] as string);
         if (typing == responseUserCur?.nama.split(" ")[0]) return setTyping("");
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [input]);
 
     useEffect(() => {
@@ -191,6 +193,7 @@ export default function Chat({ params }: { params: { id: string } }) {
                 tipeData: "typing",
             })
         );
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [typing]);
 
     useEffect(() => {

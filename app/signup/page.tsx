@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { SyntheticEvent, useEffect, useState } from "react";
@@ -21,6 +22,7 @@ export default function Signup() {
             if (cekIsLogin.status === 200) return router.replace("/room");
         }
         cekLogin();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     function handleClick(e: SyntheticEvent) {
@@ -68,7 +70,7 @@ export default function Signup() {
                 className="flex gap-3 flex-col justify-center items-center px-6 py-12 lg:px-8"
             >
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                    <img
+                    <Image
                         className="mx-auto h-10 w-auto"
                         src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
                         alt="Your Company"

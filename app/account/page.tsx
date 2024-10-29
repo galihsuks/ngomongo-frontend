@@ -5,17 +5,17 @@ import NavbarAtas from "../components/NavbarAtas";
 import NavbarBawah from "../components/NavbarBawah";
 import { useRouter } from "next/navigation";
 
-interface IUser {
-    _id: string;
-    emai: string;
-    sandi: string;
-    nama: string;
-    createdAt: string;
-    updatedAt: string;
-    __v: number;
-}
+// interface IUser {
+//     _id: string;
+//     emai: string;
+//     sandi: string;
+//     nama: string;
+//     createdAt: string;
+//     updatedAt: string;
+//     __v: number;
+// }
 
-export default function () {
+export default function Account() {
     const router = useRouter();
     const [changePass, setChangePass] = useState(false);
     const [loading, setLoading] = useState(true);
@@ -41,6 +41,7 @@ export default function () {
             setLoading(false);
         }
         fetchDataRoom();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
@@ -64,6 +65,7 @@ export default function () {
                 setSubmitBtn(false);
             }
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [email, nama, sandi, confirmSandi]);
 
     useEffect(() => {
@@ -78,6 +80,7 @@ export default function () {
                 setSubmitBtn(false);
             }
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [changePass]);
 
     const handleClickUbah = async () => {

@@ -39,6 +39,7 @@ export default function Room() {
             setLoading(false);
         }
         fetchDataRoom();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     // const token = cookies().get("token")?.value;

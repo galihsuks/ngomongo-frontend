@@ -2,7 +2,7 @@
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: Request) {
+export async function GET() {
     const token = cookies().get("token")?.value;
 
     const fetchRooms = await fetch("http://localhost:8080/user", {

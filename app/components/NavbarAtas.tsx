@@ -96,6 +96,7 @@ export default function NavbarAtas() {
                 html5QrcodeScanner.current = false;
             }
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [open]);
 
     return (

@@ -48,7 +48,7 @@ export async function GET(
             },
         }
     );
-    let responseRoom = await fetchRoom.json();
+    const responseRoom: any = await fetchRoom.json();
     if (responseRoom.pesan) {
         return NextResponse.json(
             { error: responseRoom.pesan },

@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
-export async function GET(req: Request) {
+export async function GET() {
     const token = cookies().get("token")?.value;
 
     if (token) {
@@ -10,7 +10,7 @@ export async function GET(req: Request) {
                 Authorization: `Bearer ${token}`,
             },
         });
-        const responseRooms = await fetchRooms.json();
+        // const responseRooms = await fetchRooms.json();
         if (fetchRooms.status != 200) {
             return NextResponse.json({ data: "Tidak login" }, { status: 401 });
         }
