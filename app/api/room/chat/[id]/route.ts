@@ -9,7 +9,7 @@ export async function POST(
     const token = cookies().get("token")?.value;
 
     const fetchRoom = await fetch(
-        "http://localhost:8080/room/chat/" + params.id,
+        "https://ngomongo.galihsuks.com/backend/room/chat/" + params.id,
         {
             headers: {
                 Authorization: `Bearer ${token}`,

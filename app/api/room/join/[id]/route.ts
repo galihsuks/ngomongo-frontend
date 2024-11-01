@@ -8,7 +8,7 @@ export async function GET(
 ) {
     const token = cookies().get("token")?.value;
     const fetchRoom = await fetch(
-        "http://localhost:8080/room/join/" + params.id,
+        "https://ngomongo.galihsuks.com/backend/room/join/" + params.id,
         {
             headers: {
                 Authorization: `Bearer ${token}`,

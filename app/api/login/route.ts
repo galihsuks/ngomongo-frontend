@@ -4,14 +4,17 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
     const { email, sandi } = await req.json();
 
-    const fetchLogin = await fetch("http://localhost:8080/user/login", {
-        method: "POST",
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, sandi }),
-    });
+    const fetchLogin = await fetch(
+        "https://ngomongo.galihsuks.com/backend/user/login",
+        {
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, sandi }),
+        }
+    );
 
     const responseLogin = await fetchLogin.json();
 

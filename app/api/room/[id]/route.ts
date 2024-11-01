@@ -9,7 +9,7 @@ export async function POST(
     const token = cookies().get("token")?.value;
 
     const fetchRoom = await fetch(
-        "http://localhost:8080/room/join" + params.id,
+        "https://ngomongo.galihsuks.com/backend/room/join" + params.id,
         {
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -40,7 +40,7 @@ export async function GET(
 ) {
     const token = cookies().get("token")?.value;
     const fetchRoom = await fetch(
-        "http://localhost:8080/room/getroom/" + params.id,
+        "https://ngomongo.galihsuks.com/backend/room/getroom/" + params.id,
         {
             cache: "no-store",
             headers: {
@@ -57,7 +57,7 @@ export async function GET(
     }
 
     const fetchRooms = await fetch(
-        "http://localhost:8080/room/chat/" + params.id,
+        "https://ngomongo.galihsuks.com/backend/room/chat/" + params.id,
         {
             cache: "no-store",
             headers: {
@@ -73,12 +73,15 @@ export async function GET(
         );
     }
 
-    const fetchUserCur = await fetch("http://localhost:8080/user", {
-        cache: "no-store",
-        headers: {
-            Authorization: `Bearer ${token}`,
-        },
-    });
+    const fetchUserCur = await fetch(
+        "https://ngomongo.galihsuks.com/backend/user",
+        {
+            cache: "no-store",
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        }
+    );
     const responseUserCur = await fetchUserCur.json();
     if (responseUserCur.pesan) {
         return NextResponse.json(

@@ -5,11 +5,14 @@ import { cookies } from "next/headers";
 export async function GET() {
     const token = cookies().get("token")?.value;
 
-    const fetchRooms = await fetch("http://localhost:8080/room", {
-        headers: {
-            Authorization: `Bearer ${token}`,
-        },
-    });
+    const fetchRooms = await fetch(
+        "https://ngomongo.galihsuks.com/backend/room",
+        {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        }
+    );
 
     const responseRooms = await fetchRooms.json();
 
@@ -26,15 +29,18 @@ export async function POST(req: NextRequest) {
     const { nama } = await req.json();
     const token = cookies().get("token")?.value;
 
-    const fetchRoom = await fetch("http://localhost:8080/room", {
-        headers: {
-            Authorization: `Bearer ${token}`,
-            Accept: "application/json",
-            "Content-Type": "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify({ nama }),
-    });
+    const fetchRoom = await fetch(
+        "https://ngomongo.galihsuks.com/backend/room",
+        {
+            headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: JSON.stringify({ nama }),
+        }
+    );
 
     const responseRoom = await fetchRoom.json();
 
