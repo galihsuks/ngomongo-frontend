@@ -142,11 +142,8 @@
 .input-chat {
     display: flex;
     align-items: center;
-    /* position: fixed; */
     z-index: 2;
-    /* left: 0;
-    bottom: 0; */
-    width: 100vw;
+    width: 100%;
     gap: 0.5em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -154,6 +151,7 @@
     border: 1px solid gray;
     border-radius: 2em;
     flex: 1;
+    width: 100%;
     padding: 0.6em 1em;
 }
 .input-chat button {
