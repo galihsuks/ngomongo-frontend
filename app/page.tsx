@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { SyntheticEvent, useEffect, useState } from "react";
+import imgLogo from "@/app/img/logo.svg";
+import Image from "next/image";
 
 export default function Home() {
     const router = useRouter();
@@ -56,10 +58,8 @@ export default function Home() {
                 style={{ height: "100svh" }}
                 className="flex gap-3 flex-col justify-center items-center px-6 py-12 lg:px-8"
             >
-                <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                    <h2 className="mt-2 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-                        Ngomongo
-                    </h2>
+                <div>
+                    <Image src={imgLogo} alt="omong" width={200} />
                 </div>
                 {eror && (
                     <div className="p-5 w-full sm:max-w-sm flex justify-center items-center border-2 border-indigo-500">

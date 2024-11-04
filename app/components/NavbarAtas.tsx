@@ -3,6 +3,8 @@
 import { SyntheticEvent, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Html5QrcodeScanner, Html5QrcodeScanType } from "html5-qrcode";
+import imgLogo from "@/app/img/logo.svg";
+import Image from "next/image";
 
 export default function NavbarAtas() {
     const [open, setOpen] = useState(false);
@@ -101,7 +103,7 @@ export default function NavbarAtas() {
 
     return (
         <div className="px-5 py-4 flex justify-between navbar">
-            <h1 className="font-bold text-2xl">Ngomongo</h1>
+            <Image src={imgLogo} alt="Omong" width={100} />
             <div className="flex gap-1">
                 <button
                     onClick={() => {
