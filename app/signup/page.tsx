@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { SyntheticEvent, useEffect, useState } from "react";
+import imgLogo from "@/app/img/logo.svg";
 
 export default function Signup() {
     const router = useRouter();
@@ -69,15 +70,10 @@ export default function Signup() {
                 style={{ height: "100svh" }}
                 className="flex gap-3 flex-col justify-center items-center px-6 py-12 lg:px-8"
             >
-                <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                    <Image
-                        className="mx-auto h-10 w-auto"
-                        src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                        alt="Your Company"
-                    />
-                    <h2 className="mt-2 mb-1 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-                        Ngomongo
-                    </h2>
+                <div className="flex flex-col items-center">
+                    <div>
+                        <Image src={imgLogo} alt="omong" width={200} />
+                    </div>
                     <p className="text-gray-500 text-sm">
                         Isi form dibawah untuk mendaftar
                     </p>
