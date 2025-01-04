@@ -5,7 +5,7 @@ export async function POST(req: Request) {
     const { email, sandi } = await req.json();
 
     const fetchLogin = await fetch(
-        "https://ngomongo.galihsuks.com/backend/user/login",
+        "https://omong.galihsuks.com/backend/user/login",
         {
             method: "POST",
             headers: {

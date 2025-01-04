@@ -6,7 +6,7 @@ export async function GET() {
 
     if (token) {
         const fetchRooms = await fetch(
-            "https://ngomongo.galihsuks.com/backend/user",
+            "https://omong.galihsuks.com/backend/user",
             {
                 headers: {
                     Authorization: `Bearer ${token}`,

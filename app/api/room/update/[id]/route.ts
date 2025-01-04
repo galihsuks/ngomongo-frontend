@@ -9,7 +9,7 @@ export async function PUT(
     const token = cookies().get("token")?.value;
 
     const fetchRoom = await fetch(
-        "https://ngomongo.galihsuks.com/backend/room/updateroom/" + params.id,
+        "https://omong.galihsuks.com/backend/room/updateroom/" + params.id,
         {
             headers: {
                 Authorization: `Bearer ${token}`,

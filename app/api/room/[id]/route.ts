@@ -9,7 +9,7 @@ export async function POST(
     const token = cookies().get("token")?.value;
 
     const fetchRoom = await fetch(
-        "https://ngomongo.galihsuks.com/backend/room/join" + params.id,
+        "https://omong.galihsuks.com/backend/room/join" + params.id,
         {
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -40,7 +40,7 @@ export async function GET(
 ) {
     const token = cookies().get("token")?.value;
     const fetchRoom = await fetch(
-        "https://ngomongo.galihsuks.com/backend/room/getroom/" + params.id,
+        "https://omong.galihsuks.com/backend/room/getroom/" + params.id,
         {
             cache: "no-store",
             headers: {
@@ -57,7 +57,7 @@ export async function GET(
     }
 
     const fetchRooms = await fetch(
-        "https://ngomongo.galihsuks.com/backend/room/chat/" + params.id,
+        "https://omong.galihsuks.com/backend/room/chat/" + params.id,
         {
             cache: "no-store",
             headers: {
@@ -74,7 +74,7 @@ export async function GET(
     }
 
     const fetchUserCur = await fetch(
-        "https://ngomongo.galihsuks.com/backend/user",
+        "https://omong.galihsuks.com/backend/user",
         {
             cache: "no-store",
             headers: {
