@@ -15,6 +15,7 @@ export async function POST(req: Request) {
             body: JSON.stringify({ email, sandi }),
         }
     );
+    console.log(fetchLogin);
 
     const responseLogin = await fetchLogin.json();
 
